@@ -1,4 +1,4 @@
-﻿int[] nums = { 1, 5, 45, 8, 7, 45, 85, 44, 37 };
+﻿int[] nums = { 1, 5, 45, 8, 7, 45, 85, 44};
 
 Random rand = new Random();
 int temp;
