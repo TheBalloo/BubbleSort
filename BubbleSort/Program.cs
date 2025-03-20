@@ -1,7 +1,13 @@
-﻿int[] nums = { 1, 5, 45, 8, 7, 45, 85, 44, 37 };
+﻿Random rand = new Random();
+int[] nums = new int[rand.Next(0, 100)];
 
-Random rand = new Random();
+for (int i = 0; i < nums.Length; i++)
+{
+    nums[i] = rand.Next(0, 100);
+}
+
 int temp;
+
 for (int x = 0; x < nums.Length - 1; x++)
 {
     for (int y = x + 1; y < nums.Length; y++)
