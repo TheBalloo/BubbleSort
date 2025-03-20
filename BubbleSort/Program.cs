@@ -7,7 +7,6 @@ for (int i = 0; i < nums.Length; i++)
 }
 
 int temp;
-
 for (int x = 0; x < nums.Length - 1; x++)
 {
     for (int y = x + 1; y < nums.Length; y++)
