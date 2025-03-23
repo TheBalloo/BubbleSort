@@ -3,19 +3,20 @@
 
 
 
-double num1;
-double num2;
-double result;
-char oper;
-Console.WriteLine("Введите первое число");
-num1 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите  операцию");
-oper = Convert.ToChar(Console.ReadLine());
-Console.WriteLine("Введите второе число число");
-num2 = Convert.ToDouble(Console.ReadLine());
 bool Calculate = true;
 while (Calculate)
 {
+    double num1;
+    double num2;
+    double result;
+    char oper;
+    Console.WriteLine("Введите первое число");
+    num1 = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine("Введите  операцию");
+    oper = Convert.ToChar(Console.ReadLine());
+    Console.WriteLine("Введите второе число число");
+    num2 = Convert.ToDouble(Console.ReadLine());
+    
     switch (oper)
     {
         case '+':
