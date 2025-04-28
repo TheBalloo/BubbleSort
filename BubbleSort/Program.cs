@@ -1,22 +1,73 @@
-﻿Random rand = new Random();
-int[] nums = new int[rand.Next(0, 100)];
+﻿
 
-for (int i = 0; i < nums.Length; i++)
-{
-    nums[i] = rand.Next(0, 100);
-}
 
-int temp;
-for (int x = 0; x < nums.Length - 1; x++)
+
+
+bool Calculate = true;
+while (Calculate)
 {
-    for (int y = x + 1; y < nums.Length; y++)
+    double num1;
+    double num2;
+    double result;
+    char oper;
+    Console.WriteLine("Введите первое число");
+    num1 = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine("Введите  операцию");
+    oper = Convert.ToChar(Console.ReadLine());
+    Console.WriteLine("Введите второе число число");
+    num2 = Convert.ToDouble(Console.ReadLine());
+    
+    switch (oper)
     {
-        if (nums[x] > nums[y])
-        {
-            temp = nums[x];
-            nums[x] = nums[y];
-            nums[y] = temp;
-        }
+        case '+':
+            result = num1 + num2;
+            Calculate = false;
+            Console.WriteLine("Cумма " + num1 + " и " + num2 + " равна " + result + ".");
+            break;
+
+        case '-':
+            result = num1 - num2;
+            Console.WriteLine("Разность " + num1 + " и " + num2 + " равна " + result + ".");
+            break;
+
+        case '*':
+            result = num1 * num2;
+            Console.WriteLine("Умножение " + num1 + " и " + num2 + " равно " + result + ".");
+            break;
+
+        case '/':
+            if (num2 != 0)
+            {
+                result = num1 / num2;
+                Console.WriteLine("Деление " + num1 + " и " + num2 + " равно " + result + ".");
+            }
+            else
+                Console.WriteLine("Ошибка!  Деление на ноль");
+            
+            break;
+
+        case '%':
+            result = num1 % num2;
+            Console.WriteLine("Остаток от деления " + num1 + " и " + num2 + " равен " + result + ".");
+            break;
+             
     }
-    Console.WriteLine(nums[x]);
+    Console.WriteLine("Хотите продолжить? (y/n)");
+    char reolad = Console.ReadLine()[0];
+
+    if (reolad == 'n' || reolad == 'N')
+    {
+        Calculate = false;
+    }
+    else if (reolad == 'y' || reolad == 'Y')
+    {
+        Calculate = true;
+    }
+    else
+{
+    Console.WriteLine("Неизвестная операция");
 }
+
+}
+
+
